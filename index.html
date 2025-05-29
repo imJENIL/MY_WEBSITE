@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jenil Patel - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="profile-img">JP</div>
+            <h1>Jenil Patel</h1>
+            <p class="subtitle">Machine Learning Enthusiast & C++ Developer</p>
+            <div class="contact-info">
+                <a href="mailto:jenilpatel7325@gmail.com" class="contact-item">
+                    <span class="email-icon">✉</span>
+                    jenilpatel7325@gmail.com
+                </a>
+                <div class="social-links">
+                    <a href="#" class="social-item">
+                        <span class="social-icon github">⚡</span>
+                    </a>
+                    <a href="#" class="social-item">
+                        <span class="social-icon linkedin">💼</span>
+                    </a>
+                    <a href="#" class="social-item">
+                        <span class="social-icon portfolio">🌟</span>
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <div class="card">
+                <h2>
+                    <span class="icon ml-icon">🧠</span>
+                    Machine Learning
+                </h2>
+                <div class="card-glow"></div>
+                <p>Passionate about artificial intelligence and data science. Currently exploring advanced algorithms and their real-world applications.</p>
+                <ul class="skills-list">
+                    <li><span class="skill-bullet">🔹</span>Supervised & Unsupervised Learning</li>
+                    <li><span class="skill-bullet">🔹</span>Data Preprocessing & Analysis</li>
+                    <li><span class="skill-bullet">🔹</span>Python Libraries (NumPy, Pandas, Scikit-learn)</li>
+                    <li><span class="skill-bullet">🔹</span>Model Training & Evaluation</li>
+                    <li><span class="skill-bullet">🔹</span>Feature Engineering & Selection</li>
+                </ul>
+                <div class="skill-meter">
+                    <div class="meter-label">Proficiency Level</div>
+                    <div class="progress-bar">
+                        <div class="progress ml-progress"></div>
+                        <div class="progress-glow ml-glow"></div>
+                    </div>
+                    <span class="skill-level">Beginner–Intermediate • Practical Project Experience</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>
+                    <span class="icon cpp-icon">⚡</span>
+                    C++ Programming
+                </h2>
+                <div class="card-glow"></div>
+                <p>Strong foundation in system programming and algorithmic thinking with modern C++ practices:</p>
+                <ul class="skills-list">
+                    <li><span class="skill-bullet">🔹</span>Object-Oriented Programming</li>
+                    <li><span class="skill-bullet">🔹</span>Data Structures & Algorithms</li>
+                    <li><span class="skill-bullet">🔹</span>Memory Management & Pointers</li>
+                    <li><span class="skill-bullet">🔹</span>STL (Standard Template Library)</li>
+                    <li><span class="skill-bullet">🔹</span>Problem Solving & Logic Building</li>
+                </ul>
+                <div class="skill-meter">
+                    <div class="meter-label">Proficiency Level</div>
+                    <div class="progress-bar">
+                        <div class="progress cpp-progress"></div>
+                        <div class="progress-glow cpp-glow"></div>
+                    </div>
+                    <span class="skill-level">Fundamental • Advancing</span>
+                </div>
+            </div>
+
+            <div class="card about-card">
+                <h2>
+                    <span class="icon about-icon">👨‍💻</span>
+                    About Me
+                </h2>
+                <p>I'm a passionate developer with a keen interest in machine learning and programming. Currently building my expertise in data science and software development, I enjoy solving complex problems and creating innovative solutions.</p>
+                
+                <div class="interests">
+                    <h3>Interests & Goals</h3>
+                    <div class="interest-tags">
+                        <span class="tag">AI/ML Research</span>
+                        <span class="tag">Data Science</span>
+                        <span class="tag">Algorithm Design</span>
+                        <span class="tag">Software Development</span>
+                        <span class="tag">Open Source</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card projects-card">
+                <h2>
+                    <span class="icon projects-icon">🚀</span>
+                    Projects & Learning
+                </h2>
+                <div class="project-item">
+                    <h4>Machine Learning Journey</h4>
+                    <p>Exploring various ML algorithms and their applications in real-world scenarios.</p>
+                </div>
+                <div class="project-item">
+                    <h4>C++ Practice</h4>
+                    <p>Building strong programming fundamentals through algorithm implementation and problem-solving.</p>
+                </div>
+                <div class="project-item">
+                    <h4>Future Goals</h4>
+                    <p>Working towards advanced machine learning projects and contributing to open-source communities.</p>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer-content">
+                <p>&copy; 2025 Jenil Patel. All rights reserved.</p>
+                <p>Let's connect and build something amazing together!</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Enhanced animations and interactions
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animate progress bars with enhanced timing
+            const progressBars = document.querySelectorAll('.progress');
+            const progressGlows = document.querySelectorAll('.progress-glow');
+            
+            setTimeout(() => {
+                progressBars.forEach((bar, index) => {
+                    const width = bar.classList.contains('ml-progress') ? '70%' : '60%';
+                    bar.style.width = width;
+                    if (progressGlows[index]) {
+                        progressGlows[index].style.width = width;
+                    }
+                });
+            }, 800);
+
+            // Enhanced card hover effects with stagger
+            const cards = document.querySelectorAll('.card');
+            cards.forEach((card, index) => {
+                // Staggered entrance animation
+                card.style.animationDelay = `${index * 0.1}s`;
+                
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-15px) scale(1.02)';
+                    
+                    // Add ripple effect
+                    const ripple = document.createElement('div');
+                    ripple.style.cssText = `
+                        position: absolute;
+                        width: 10px;
+                        height: 10px;
+                        background: radial-gradient(circle, rgba(255,255,255,0.8), transparent);
+                        border-radius: 50%;
+                        pointer-events: none;
+                        animation: rippleExpand 0.6s ease-out;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    `;
+                    this.appendChild(ripple);
+                    
+                    setTimeout(() => ripple.remove(), 600);
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                });
+            });
+
+            // Enhanced floating animation for profile image
+            const profileImg = document.querySelector('.profile-img');
+            let floatDirection = 1;
+            
+            setInterval(() => {
+                profileImg.style.transform = `translateY(${floatDirection * -8}px) rotate(${floatDirection * 2}deg)`;
+                floatDirection *= -1;
+            }, 2000);
+
+            // Parallax scroll effect for background
+            window.addEventListener('scroll', () => {
+                const scrolled = window.pageYOffset;
+                const parallax = scrolled * 0.5;
+                document.body.style.backgroundPositionY = `${parallax}px`;
+            });
+
+            // Intersection Observer for scroll animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all cards for scroll animation
+            cards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+                card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(card);
+            });
+        });
+
+        // Add ripple animation keyframes
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes rippleExpand {
+                0% { width: 10px; height: 10px; opacity: 1; }
+                100% { width: 200px; height: 200px; opacity: 0; }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
